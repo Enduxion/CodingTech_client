@@ -12,7 +12,7 @@
 }
 
 * {
-  @apply font-poppins m-0 p-0 box-border;
+  @apply font-poppins m-0 p-0 box-border scroll-smooth;
 }
 
 ::-webkit-scrollbar {

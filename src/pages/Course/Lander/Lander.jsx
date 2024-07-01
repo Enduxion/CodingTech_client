@@ -22,7 +22,7 @@ export default function Lander({courseData, courseDescription}) {
           </span>
         </div>
       </div>
-      <div className="w-1/4 h-full flex flex-col items-center justify-center gap-4">
+      <div className="w-1/4 flex-grow flex flex-col items-center justify-center gap-4">
         <Link
           to="/join"
           className="w-1/2 bg-gradient-to-r from-primary via-blue-700 via-70% to-blue-800  text-white items-center justify-center flex py-2 gap-2 rounded-lg font-roboto shadow-xl hover:gap-3 hover:via-60% duration-100"
