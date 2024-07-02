@@ -9,6 +9,7 @@ import About from "./pages/About/About";
 import Course from "./pages/Course/Course";
 import AddCourse from "./AddCourses";
 import Courses from "./pages/Courses/Courses";
+import Gallery from "./pages/Gallery/Gallery";
 
 // Components import
 
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/:id" element={<Course />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/addCourse" element={<AddCourse />} />
       </Routes>
       <Footer />
