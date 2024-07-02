@@ -31,7 +31,7 @@ export default function Lander({courseData, courseDescription}) {
         </Link>
         <Link
           to="/questions"
-          className="w-1/2  bg-gradient-to-r from-orange-700 via-orange-500 via-70% to-orange-800  text-white items-center justify-center flex py-2 gap-2 rounded-lg font-roboto shadow-xl hover:gap-3 hover:via-60% duration-100"
+          className="w-1/2 bg-gradient-to-r from-orange-700 via-orange-500 via-70% to-orange-800  text-white items-center justify-center flex py-2 gap-2 rounded-lg font-roboto shadow-xl hover:gap-3 hover:via-60% duration-100"
         >
           Know More <i className="fas fa-angle-right text-sm"></i>
         </Link>

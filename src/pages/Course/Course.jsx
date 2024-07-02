@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import Lander from "./Lander/Lander";
 import LeftSidePanel from "./LeftSidePanel/LeftSidePanel";
@@ -29,20 +29,23 @@ export default function Course() {
     }
   }, [courseData]);
 
+  const overviewRef = useRef(null);
+  const rightSidePanelRef = useRef(null);
+
   return (
     <div className="w-full flex flex-col mt-nav">
       <Lander courseData={courseData} courseDescription={courseDescription} />
       {courseDescription !== null ? (
-        <div className="w-full relative flex flex-row items-center justify-center">
+        <div className="w-full flex flex-row justify-center relative">
           <LeftSidePanel
-            className="absolute top-0 left-0 w-1/5 flex flex-col bg-gray-100 h-full p-8 gap-4"
+            className="absolute top-0 left-0 w-1/5 flex flex-col bg-gray-200 h-full p-8 gap-4 overflow-y-scroll overflow-x-hidden"
             faqs={courseDescription.faqs}
             shortDesc={courseDescription.shortDesc}
             name={courseData.name}
           />
-          <Overview className="w-3/5 bg-white p-8" cD={courseDescription} c={courseData} />
+          <Overview className="w-3/5 bg-white p-8 flex flex-col" cD={courseDescription} c={courseData} />
           <RightSidePanel
-            className="absolute top-0 right-0 w-1/5 flex flex-col bg-gray-100 h-full p-8 gap-1"
+            className="absolute top-0 right-0 w-1/5 flex flex-col bg-gray-200 h-full p-8 gap-1 overflow-y-scroll overflow-x-hidden"
           />
         </div>
       ) : (

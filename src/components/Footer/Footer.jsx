@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col w-full gap-8 pb-4 p-16 bg-gradient-to-r from-primary via-blue-600 via-70% to-blue-800 ">
+    <div className="flex flex-col w-full gap-8 pb-4 p-16 bg-gradient-to-r from-primary via-blue-600 via-70% to-blue-800">
       <div className="flex flex-row w-full">
       <div className="text-gray-400 flex flex-col w-1/4 items-center">
         <span className="text-lg text-white font-roboto">Coding Technology Pvt. Ltd.</span>
