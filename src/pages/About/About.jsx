@@ -87,7 +87,7 @@ export default function About() {
           <div className="w-[1px] rounded-full min-h-full flex bg-indigo-600"></div>
           <div className="w-[calc(50%-0.5px-1rem)] text-justify flex flex-col">
             <span className="font-roboto text-xl font-bold">Contact</span>
-            <p>
+            <div>
               You can contact us on{" "}
               <Link
                 to="mailto:info@codingtechnology.com.np"
@@ -122,7 +122,7 @@ export default function About() {
                   info@codingtechnology.com.np
                 </Link>
               </div>
-            </p>
+            </div>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Navlink({ name, link, dropdown }) {
+export default function Navlink({ name, link, dropdown, dropdownName }) {
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (
@@ -21,15 +21,15 @@ export default function Navlink({ name, link, dropdown }) {
       <AnimatePresence>
         {showDropdown && dropdown && (
           <motion.div
-            className="flex flex-col w-[150%] border border-t-transparent shadow-lg absolute top-full bg-white"
+            className="flex flex-col w-[150%] h-64 overflow-y-scroll border border-t-transparent shadow-lg absolute top-full bg-white"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
           >
             {dropdown.map((dropdownItem) => (
-              <div key={dropdownItem.link} className="flex flex-col w-full">
-                <Link className="px-4 py-2 hover:text-gray-500" to={dropdownItem.link}>
+              <div key={dropdownItem._id} className="flex flex-col w-full">
+                <Link className="px-4 py-2 hover:text-gray-500" to={`${link}/${dropdownItem._id}`}>
                   {dropdownItem.name}
                 </Link>
               </div>

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Lander from "./Lander/Lander";
 import LeftSidePanel from "./LeftSidePanel/LeftSidePanel";
@@ -19,7 +19,7 @@ export default function Course() {
           setCourseData(res.data.course);
         });
     }
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     if (courseData) {
@@ -28,9 +28,6 @@ export default function Course() {
       });
     }
   }, [courseData]);
-
-  const overviewRef = useRef(null);
-  const rightSidePanelRef = useRef(null);
 
   return (
     <div className="w-full flex flex-col mt-nav">

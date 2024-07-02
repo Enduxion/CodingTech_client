@@ -16,25 +16,25 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  @apply w-2;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  @apply bg-white;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border: 1px solid white;
-  @apply bg-gradient-to-b from-blue-100 via-blue-700 via-50% to-blue-100 rounded-full;
+  @apply bg-gray-400 rounded-full;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #01f;
+  @apply bg-gray-500;
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: #03f;
+  @apply bg-gray-800;
 }

@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import About from "./pages/About/About";
 import Course from "./pages/Course/Course";
 import AddCourse from "./AddCourses";
+import Courses from "./pages/Courses/Courses";
 
 // Components import
 
@@ -20,6 +21,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="/courses/:id" element={<Course />} />
         <Route path="/addCourse" element={<AddCourse />} />
       </Routes>

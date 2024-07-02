@@ -10,7 +10,7 @@ export default function Overview({ className, cD, c }) {
 
   return (
     <div className={className}>
-      <div className="font-roboto text-4xl w-full text-center">{c.name}: A Complete Guide To Getting Started</div>
+      <div className="font-roboto text-4xl w-full text-center" id="What">{c.name}: A Complete Guide To Getting Started</div>
       {/* <div className="w-full h-96 overflow-hidden rounded-full mb-5">
         <img src={c.img} id="What" className="object-cover saturate-50" />
       </div>  */}

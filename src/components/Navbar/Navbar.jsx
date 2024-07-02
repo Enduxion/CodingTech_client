@@ -1,7 +1,17 @@
 import Navlink from "../Navlink/Navlink";
 import logoImage from "../../assets/images/logo.jpg";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Navbar() {
+  const [allCourses, setAllCourses] = useState(null);
+  useEffect(() => {
+    if (!allCourses) {
+      axios.get("http://localhost:3000/api/courses/get_courses").then((res) => {
+        setAllCourses(res.data);
+      })
+    }
+  }, []);
   const navlinks = [
     {
       name: "Home",
@@ -16,28 +26,7 @@ export default function Navbar() {
     {
       name: "Courses",
       link: "/courses",
-      dropdown: [
-        {
-          name: "Python and Django",
-          link: "/courses/python",
-        },
-        {
-          name: "MERN Stack",
-          link: "/courses/mern",
-        },
-        {
-          name: "MEAN Stack",
-          link: "/courses/mean",
-        },
-        {
-          name: "Java",
-          link: "/courses/java",
-        },
-        {
-          name: "Others",
-          link: "/courses/others",
-        },
-      ],
+      dropdown: allCourses
     },
     {
       name: "Gallery",
