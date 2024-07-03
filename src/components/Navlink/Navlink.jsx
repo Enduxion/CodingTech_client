@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Navlink({ name, link, dropdown, dropdownName }) {
+export default function Navlink({ name, link, dropdown, index }) {
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (

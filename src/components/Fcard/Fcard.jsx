@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
-export default function Fcard({ name, link, img, duration }) {
+export default function Fcard({ name, link, img, duration, index }) {
   const navigator = useNavigate();
   return (
-    <div
+    <motion.div
       onClick={() => navigator(link)}
-      className="w-full border-2 shadow-lg hover:shadow-2xl rounded-2xl cursor-pointer overflow-hidden"
+      className="w-full border-2 shadow-lg rounded-2xl cursor-pointer overflow-hidden"
+      initial={{ x: -20, opacity: 0 }}
+      whileHover={{  }}
+      whileInView={{ x: 0, opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1, delay: 0.1 * index, ease: "backInOut" }}
     >
       <div className="">
         <img src={img} className="object-cover" alt={name} />
@@ -20,6 +26,6 @@ export default function Fcard({ name, link, img, duration }) {
           <i className="fas fa-angle-right"></i>
         </Link>
       </div>
-    </div>
+    </motion.div>
   )
 }

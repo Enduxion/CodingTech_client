@@ -8,6 +8,7 @@ import caro5 from "../../../assets/images/caro5.png";
 import ReadMore from "../../../components/ReadMore/ReadMore";
 import { ContactSVG, MonitorSVG, ProgrammingArrowSVG } from "../../../components/SVG/SVG";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Lander() {
   const caroData = [caro5, caro2, caro3, caro4, caro1];
@@ -28,7 +29,13 @@ export default function Lander() {
   };
 
   return (
-    <div className="w-full flex flex-row mt-nav">
+    <motion.div
+      className="w-full flex flex-row mt-nav"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+    >
       {/* Carousal */}
       <div className="relative w-3/5">
         <div
@@ -40,13 +47,13 @@ export default function Lander() {
           ))}
         </div>
         <div
-          className="absolute top-1/2 left-0 z-10 text-white text-3xl ml-4 mix-blend-exclusion"
+          className="absolute top-1/2 left-0 z-10 text-white text-3xl ml-4 mix-blend-exclusion cursor-pointer"
           onClick={() => changeIndex(-1)}
         >
           <i className="fas fa-angle-left"></i>
         </div>
         <div
-          className="absolute top-1/2 right-0 z-10 text-white text-3xl mr-4 mix-blend-exclusion"
+          className="absolute top-1/2 right-0 z-10 text-white text-3xl mr-4 mix-blend-exclusion cursor-pointer"
           onClick={() => changeIndex(1)}
         >
           <i className="fas fa-angle-right"></i>
@@ -84,6 +91,6 @@ export default function Lander() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

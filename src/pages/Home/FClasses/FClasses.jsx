@@ -23,7 +23,7 @@ export default function FClasses() {
         {
           courses && courses.map((course, index) => {
             return (
-              <Fcard name={course.name} link={`/courses/${course._id}`} img={course.img} duration={course.duration} key={index}/>
+              <Fcard name={course.name} link={`/courses/${course._id}`} img={course.img} duration={course.duration} key={index} index={index % 4} />
             )
           })
         }
