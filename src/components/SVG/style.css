@@ -40,20 +40,20 @@
 }
 
 #BACKGROUND > path {
-  animation: 10s sunRotate infinite linear;
+  animation: 40s sunRotate infinite linear;
 }
 
 @keyframes sunRotate {
   0%, 100% {
-    fill: #DAE6F5C0;
-  } 20% {
     fill: #fff6ceC0;
+  } 20% {
+    fill: #0032a6C0;
   } 40% {
     /* fill: #fff3deC0; */
   } 60% {
-    fill: #0032a6C0;
-  } 80% {
     fill: #fff6ceC0;
+  } 80% {
+    fill: #DAE6F5C0;
   }
 }
 

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Fcard from "../../../components/Fcard/Fcard";
-// import courses from "../../../assets/data/courses";
 
 export default function FClasses() {
   const [courses, setCourses] = useState(null);
@@ -9,7 +8,6 @@ export default function FClasses() {
     if (!courses) {
       axios.get("http://localhost:3000/api/courses/get_courses").then((res) => {
         setCourses(res.data);
-        console.log(res.data);
       })
     }
   }, []);

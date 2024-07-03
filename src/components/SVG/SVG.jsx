@@ -120,7 +120,7 @@ const ComputerAboutSVG = ({ className }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect width="500" height="419" fill="#1E1E1E" />
-      <g id="Frame 1" clip-path="url(#clip0_0_1)">
+      <g id="Frame 1" clipPath="url(#clip0_0_1)">
         <rect width="500" height="419" fill="white" />
         <g id="BACKGROUND">
           <path id="Vector" d="M500 0H0V422.478H500V0Z" fill="#E8EBED" />
@@ -201,57 +201,57 @@ const ComputerAboutSVG = ({ className }) => {
                   id="Vector_14"
                   d="M426.51 167.114V236.284"
                   stroke="#E8EBED"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
+                  strokeWidth="2"
+                  strokeMiterlimit="10"
                 />
                 <path
                   id="Vector_15"
                   d="M406.173 167.114V236.284"
                   stroke="#E8EBED"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
+                  strokeWidth="2"
+                  strokeMiterlimit="10"
                 />
                 <path
                   id="Vector_16"
                   d="M385.835 167.114V236.284"
                   stroke="#E8EBED"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
+                  strokeWidth="2"
+                  strokeMiterlimit="10"
                 />
                 <path
                   id="Vector_17"
                   d="M365.497 167.114V236.284"
                   stroke="#E8EBED"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
+                  strokeWidth="2"
+                  strokeMiterlimit="10"
                 />
                 <path
                   id="Vector_18"
                   d="M345.159 167.114V236.284"
                   stroke="#E8EBED"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
+                  strokeWidth="2"
+                  strokeMiterlimit="10"
                 />
                 <path
                   id="Vector_19"
                   d="M325.074 183.86H446.638"
                   stroke="#E8EBED"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
+                  strokeWidth="2"
+                  strokeMiterlimit="10"
                 />
                 <path
                   id="Vector_20"
                   d="M325.074 201.335H446.638"
                   stroke="#E8EBED"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
+                  strokeWidth="2"
+                  strokeMiterlimit="10"
                 />
                 <path
                   id="Vector_21"
                   d="M325.074 218.809H446.638"
                   stroke="#E8EBED"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
+                  strokeWidth="2"
+                  strokeMiterlimit="10"
                 />
               </g>
               <g id="Group_7">
@@ -280,8 +280,8 @@ const ComputerAboutSVG = ({ className }) => {
                 id="Vector_24"
                 d="M250.336 0V66.327"
                 stroke="#1C1E1D"
-                stroke-width="2.9553"
-                stroke-miterlimit="10"
+                strokeWidth="2.9553"
+                strokeMiterlimit="10"
               />
               <path
                 id="Vector_25"
@@ -373,7 +373,7 @@ const ComputerAboutSVG = ({ className }) => {
                     x2="210.281"
                     y2="237.879"
                     stroke="white"
-                    stroke-width="3"
+                    strokeWidth="3"
                   />
                   <line
                     id="Line 2"
@@ -382,7 +382,7 @@ const ComputerAboutSVG = ({ className }) => {
                     x2="223.281"
                     y2="243.879"
                     stroke="white"
-                    stroke-width="3"
+                    strokeWidth="3"
                   />
                   <line
                     id="Line 3"
@@ -391,7 +391,7 @@ const ComputerAboutSVG = ({ className }) => {
                     x2="217.281"
                     y2="250.879"
                     stroke="white"
-                    stroke-width="3"
+                    strokeWidth="3"
                   />
                 </g>
                 <g id="Group_16">
@@ -462,7 +462,7 @@ const ComputerAboutSVG = ({ className }) => {
               x2="101.781"
               y2="176.399"
               stroke="#597ACC"
-              stroke-width="3"
+              strokeWidth="3"
             />
             <line
               id="Line 5"
@@ -471,7 +471,7 @@ const ComputerAboutSVG = ({ className }) => {
               x2="101.781"
               y2="168.399"
               stroke="#597ACC"
-              stroke-width="3"
+              strokeWidth="3"
             />
             <circle
               id="Ellipse 1"

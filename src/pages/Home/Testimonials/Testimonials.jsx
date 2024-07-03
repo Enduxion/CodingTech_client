@@ -85,10 +85,12 @@ export default function Testimonials() {
         {reviews.map((review, index) => (
           <Tcard
             key={index}
+            index={index}
             name={review.name}
             text={review.text}
             stars={review.stars}
             src={review.src}
+            onFocus={currentIndex}
           />
         ))}
         <div className="shrink-0 w-[calc(33.34%-1rem)] aspect-square"></div>
