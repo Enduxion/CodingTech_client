@@ -7,8 +7,8 @@ import caro5 from "../../../assets/images/caro5.png";
 
 import ReadMore from "../../../components/ReadMore/ReadMore";
 import { ContactSVG, MonitorSVG, ProgrammingArrowSVG } from "../../../components/SVG/SVG";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Lcard from "../../../components/Lcard/Lcard";
 
 export default function Lander() {
   const caroData = [caro5, caro2, caro3, caro4, caro1];
@@ -71,24 +71,12 @@ export default function Lander() {
           </ReadMore>
         </div>
         <div className="flex flex-row w-full h-1/2 bg-black">
-          <div className="flex flex-col w-1/2 h-full bg-blue-700 relative items-center justify-center">
+          <Lcard className="flex flex-col w-1/2 h-full bg-blue-700 relative items-center justify-center" text="Enroll with our expert teachers" link="/join" linkText="Join">
             <MonitorSVG className="h-full z-[0] opacity-10 aspect-square absolute stroke-0 fill-white" />
-            <span className="text-xl z-[1] text-white tracking-wide flex flex-row gap-2 py-2 px-4 text-center">
-              Enroll with our expert teachers
-            </span>
-            <Link to="/register" className="text-lg z-[1] w-1/2 text-white tracking-wide flex flex-row gap-2 py-1 px-5 items-center rounded-full bg-white bg-opacity-15 hover:bg-opacity-30 border-2 border-transparent justify-center hover:border-white hover:border-opacity-30 hover:gap-3 duration-150">
-              <span>Join</span><i className="fas fa-arrow-right text-sm"></i>
-            </Link>
-          </div>
-          <div className="flex w-1/2 h-full bg-orange-500 relative flex-col items-center justify-center">
+          </Lcard>
+          <Lcard className="flex w-1/2 h-full bg-orange-500 relative flex-col items-center justify-center" text="Contact us to know more" link="/contact" linkText="Contact">
             <ContactSVG className="h-full z-[0] aspect-square absolute stroke-white opacity-25" />
-            <span className="text-xl z-[1] text-white tracking-wide flex flex-row gap-2 py-2 px-4 text-center">
-              Contact us to know more
-            </span>
-            <Link to="/register" className="text-lg z-[1] w-1/2 text-white tracking-wide flex flex-row gap-2 py-1 px-5 items-center bg-gray-500 rounded-full bg-opacity-50 hover:bg-opacity-30 border-2 border-transparent justify-center hover:border-gray-500 hover:border-opacity-30 hover:gap-3 duration-150">
-              <span>Contact</span><i className="fas fa-arrow-right text-sm"></i>
-            </Link>
-          </div>
+          </Lcard>
         </div>
       </div>
     </motion.div>
