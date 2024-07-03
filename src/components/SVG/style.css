@@ -1,0 +1,116 @@
+#Lines > line {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+
+#Lines > line:nth-child(1) {
+  animation: 2s animatePath infinite alternate;
+}
+#Lines > line:nth-child(2) {
+  animation: 4s animatePath infinite alternate;
+}
+#Lines > line:nth-child(3) {
+  animation: 3s animatePath infinite alternate;
+}
+
+#Smoke > path {
+  animation: 5s smokeEffect infinite alternate;
+}
+
+#Lights {
+  transform-origin: top;
+  animation: 4s swingEffect infinite linear;
+} 
+
+#hands > line {
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+#hands > line:nth-child(1) {
+  animation: 1s rotate infinite linear;
+}
+
+#hands > line:nth-child(2) {
+  animation: 20s rotate infinite linear;
+}
+
+#Vector_30 {
+  animation: 4s bgChange infinite linear;
+}
+
+#BACKGROUND > path {
+  animation: 10s sunRotate infinite linear;
+}
+
+@keyframes sunRotate {
+  0%, 100% {
+    fill: #DAE6F5C0;
+  } 20% {
+    fill: #fff6ceC0;
+  } 40% {
+    /* fill: #fff3deC0; */
+  } 60% {
+    fill: #0032a6C0;
+  } 80% {
+    fill: #fff6ceC0;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes bgChange {
+  0%, 100% {
+    fill: #97d5ff;
+  }
+  50% {
+    fill: #DAE6F5;
+  }
+}
+
+@keyframes swingEffect {
+  0% , 100%{
+    rotate: 20deg
+  }
+  50% {
+    rotate: -20deg
+  }
+}
+
+@keyframes smokeEffect {
+  0% {
+    transform: translateY(5px);
+    filter: blur(1px);
+  }
+  25% {
+    transform: translateY(0px);
+    filter: blur(2px);
+  }
+  50% {
+    transform: translateY(-10px);
+    filter: blur(3px);
+  }
+  75% {
+    transform: translateY(-20px);
+    filter: blur(4px);
+  }
+  100% {
+    transform: translateY(-30px);
+    filter: blur(5px);
+  }
+}
+
+@keyframes animatePath {
+  0% {
+    stroke-dashoffset: 0;
+  } 100% {
+    stroke-dashoffset: 300;
+  }
+}
