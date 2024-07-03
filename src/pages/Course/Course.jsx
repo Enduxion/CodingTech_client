@@ -5,8 +5,9 @@ import Lander from "./Lander/Lander";
 import LeftSidePanel from "./LeftSidePanel/LeftSidePanel";
 import Overview from "./Overview/Overview";
 import RightSidePanel from "./RightSidePanel/RightSidePanel";
+import TransitionComponent from "../../components/TransitionComponent/TransitionComponent";
 
-export default function Course() {
+const Course = () => {
   const { id } = useParams();
   const [courseData, setCourseData] = useState(null);
   const [courseDescription, setCourseDescription] = useState(null);
@@ -51,3 +52,6 @@ export default function Course() {
     </div>
   );
 }
+
+
+export default TransitionComponent(Course);

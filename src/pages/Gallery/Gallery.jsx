@@ -3,8 +3,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Icard from "../../components/Icard/Icard";
 import IPopup from "../../components/IPopup/IPopup";
+import TransitionComponent from "../../components/TransitionComponent/TransitionComponent";
 
-export default function Gallery() {
+const Gallery = () => {
   const [imgLinks, setImgLinks] = useState(null);
   const [imgIndex, setImgIndex] = useState(-1);
 
@@ -36,3 +37,5 @@ export default function Gallery() {
     </div>
   );
 }
+
+export default TransitionComponent(Gallery);

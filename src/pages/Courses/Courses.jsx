@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Fcard from "../../components/Fcard/Fcard";
+import TransitionComponent from "../../components/TransitionComponent/TransitionComponent";
 
-export default function Courses() {
+const Courses = () => {
   const [courses, setCourses] = useState(null);
   useEffect(() => {
     axios.get("http://localhost:3000/api/courses/get_courses").then((res) => {
@@ -29,3 +30,5 @@ export default function Courses() {
     </div>
   );
 }
+
+export default TransitionComponent(Courses);

@@ -1,9 +1,10 @@
+import TransitionComponent from "../../components/TransitionComponent/TransitionComponent";
 import SectionAbout from "./About/SectionAbout";
 import FClasses from "./FClasses/FClasses";
 import Lander from "./Lander/Lander";
 import Testimonials from "./Testimonials/Testimonials";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Lander />
@@ -13,3 +14,6 @@ export default function Home() {
     </>
   );
 }
+
+
+export default TransitionComponent(Home);

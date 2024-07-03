@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import aboutImage from "../../assets/images/caro1.jpg";
-export default function About() {
+import TransitionComponent from "../../components/TransitionComponent/TransitionComponent";
+const About = () => {
   return (
     <div className="flex w-full mt-nav flex-col">
       <div className="w-full bg-gray-100 p-8">
@@ -129,3 +130,5 @@ export default function About() {
     </div>
   );
 }
+
+export default TransitionComponent(About);
