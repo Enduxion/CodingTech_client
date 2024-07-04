@@ -1,5 +1,5 @@
 import Navlink from "../Navlink/Navlink";
-import logoImage from "../../assets/images/logo.jpg";
+import logoImage from "../../assets/images/logo_t.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -73,7 +73,7 @@ export default function Navbar() {
       }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       id="navbar"
-      className="fixed top-0 left-0 w-full h-nav bg-white flex flex-row justify-between px-8 border-b-[1px] border-slate-400 items-center z-50"
+      className="fixed top-0 left-0 w-full h-nav bg-white flex flex-row justify-between px-8 border-b-[1px] border-slate-400 bg-opacity-60 backdrop-hue-rotate-90 backdrop-blur-md items-center z-50"
     >
       <div>
         <img src={logoImage} alt="Coding Technology Logo" />
@@ -85,7 +85,7 @@ export default function Navbar() {
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -10, opacity: 0 }}
-              transition={{ duration: 0.1, ease: "linear" }}
+              transition={{ duration: 0.1, ease: "easeInOut" }}
               className="flex flex-row rounded-b-xl gap-8 bg-gradient-to-r from-primary to-blue-800 px-8 py-2 text-white overflow-hidden"
             >
               <motion.div
@@ -122,7 +122,7 @@ export default function Navbar() {
         <motion.div
           className="flex flex-row py-1"
           animate={{ y: showTop ? 0 : [0, -10, 0] }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, ease: "backOut" }}
         >
           {navlinks.map((navlink, index) => (
             <Navlink

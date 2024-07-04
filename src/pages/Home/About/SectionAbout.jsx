@@ -10,7 +10,7 @@ export default function SectionAbout() {
       </span>
       <div className="w-full flex flex-row py-4 gap-4">
         <div className="w-3/5 flex flex-col gap-2">
-          <ReadMore className="line-clamp-[12] text-justify" href="/about" rmClassName="bg-primary text-white w-fit px-4 py-1 rounded-full">
+          <ReadMore className="line-clamp-[15] text-justify" href="/about" rmClassName="bg-primary text-white w-fit px-4 py-1 rounded-full">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus labore molestias ipsam, impedit quos nemo blanditiis quasi quaerat maxime vel exercitationem odit magnam temporibus error vero ex eos animi officia corporis aspernatur quae accusantium. Quod, quos omnis? Veritatis id necessitatibus sapiente doloribus aliquid? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident quod sunt impedit fugit aspernatur. Ipsum porro adipisci voluptas, enim similique consequatur magnam omnis! Mollitia sunt facere quos repudiandae sapiente ratione ipsa sint odit dolorum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium cupiditate vel, impedit nesciunt quo nulla voluptatibus ex enim quia illum, excepturi, eveniet in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facilis impedit possimus nulla officiis! Voluptas, earum reiciendis! Debitis corrupti soluta dicta numquam consequuntur suscipit porro similique officiis ipsum ad atque a quae voluptate consequatur quos iste, laudantium magnam qui voluptatum, maiores nesciunt aliquam autem recusandae placeat! Aliquam expedita iste praesentium veniam quam alias laboriosam. Alias atque sint necessitatibus tenetur quaerat.
           </ReadMore>
         </div>

@@ -13,7 +13,7 @@ export default function Navlink({ name, link, dropdown, index }) {
     >
       <Link
         to={link}
-        className="uppercase tracking-widest px-4 py-2 hover:text-gray-500"
+        className="uppercase tracking-widest px-4 py-2"
       >
         {name}
         {dropdown && <i className="fas fa-angle-down ml-2"></i>}
