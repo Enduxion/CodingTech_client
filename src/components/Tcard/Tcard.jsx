@@ -1,20 +1,18 @@
-import { useNavigate } from "react-router-dom";
 import unknown from "../../assets/images/Reviews/unknown.jpg";
 import { useEffect, useState } from "react";
 
-export default function Tcard({ name, stars, text, src, link, index, onFocus }) {
-  const navigator = useNavigate();
+export default function Tcard({ name, stars, text, src, index, onFocus, setOnFocus }) {
   const [classes, setClasses] = useState("");
   useEffect(() => {
     if (index !== onFocus) {
       const distance = index - onFocus;
-      setClasses(`shrink-0 w-[calc(33.34%-0.67rem)] flex flex-col rounded-3xl bg-white aspect-square p-4 cursor-pointer shadow-lg ${distance === 1 ? "scale-[0.9] opacity-75" : "scale-[0.85] opacity-50"}`);
+      setClasses(`shrink-0 duration-500  ease-in-out w-[calc(33.34%-0.67rem)] flex flex-col rounded-3xl bg-white aspect-square p-4 cursor-pointer shadow-lg ${distance === 1 ? "scale-[0.9] opacity-75" : "scale-[0.85] opacity-50"}`);
     } else {
-      setClasses("shrink-0 w-[calc(33.34%-0.67rem)] flex flex-col rounded-3xl bg-white aspect-square p-4 cursor-pointer shadow-lg")
+      setClasses("shrink-0 duration-500  ease-in-out w-[calc(33.34%-0.67rem)] flex flex-col rounded-3xl bg-white aspect-square p-4 cursor-pointer shadow-lg")
     }
   }, [onFocus, index]);
   return (
-    <div className={classes} onClick={() => navigator(link)}>
+    <div className={classes} onClick={setOnFocus}>
       <div className="flex flex-row h-16 justify-between">
         <img
           src={src ? src : unknown}

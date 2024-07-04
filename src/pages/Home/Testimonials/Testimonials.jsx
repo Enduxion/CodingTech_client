@@ -91,6 +91,7 @@ export default function Testimonials() {
             stars={review.stars}
             src={review.src}
             onFocus={currentIndex}
+            setOnFocus={() => setCurrentIndex(index)}
           />
         ))}
         <div className="shrink-0 w-[calc(33.34%-1rem)] aspect-square"></div>

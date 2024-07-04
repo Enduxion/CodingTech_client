@@ -21,7 +21,7 @@ export default function Navlink({ name, link, dropdown, index }) {
       <AnimatePresence>
         {showDropdown && dropdown && (
           <motion.div
-            className="flex flex-col w-[150%] h-64 overflow-y-scroll border border-t-transparent shadow-lg absolute top-full bg-white"
+            className="flex flex-col w-[150%] h-64 overflow-y-scroll border border-t-transparent rounded-b-lg shadow-lg absolute top-full bg-white"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -29,7 +29,7 @@ export default function Navlink({ name, link, dropdown, index }) {
           >
             {dropdown.map((dropdownItem) => (
               <div key={dropdownItem._id} className="flex flex-col w-full">
-                <Link className="px-4 py-2 hover:text-gray-500" to={`${link}/${dropdownItem._id}`}>
+                <Link className="px-4 py-2 rounded-lg truncate hover:bg-gray-300" to={`${link}/${dropdownItem._id}`}>
                   {dropdownItem.name}
                 </Link>
               </div>

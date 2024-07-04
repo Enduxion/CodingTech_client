@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [allCourses, setAllCourses] = useState(null);
@@ -55,6 +56,12 @@ export default function Navbar() {
       dropdown: null,
     },
   ];
+
+  const variants = {
+    initial: { rotate: 0 },
+    onHover: { rotate: [0, "20deg", "-20deg", "10deg", "-10deg", 0] },
+  };
+
   return (
     <motion.div
       initial={{ y: -10, opacity: 0 }}
@@ -62,7 +69,7 @@ export default function Navbar() {
       viewport={{ once: true }}
       style={{
         height: showTop ? "6.5rem" : "4.5rem",
-        transition: "0.5s height"
+        transition: "0.5s height",
       }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       id="navbar"
@@ -81,23 +88,41 @@ export default function Navbar() {
               transition={{ duration: 0.1, ease: "linear" }}
               className="flex flex-row rounded-b-xl gap-8 bg-gradient-to-r from-primary to-blue-800 px-8 py-2 text-white overflow-hidden"
             >
-              <div className="flex flex-row gap-1 items-center">
-                <i className="fa-solid fa-phone"></i>
-                <span className="">+977-1-5100788</span>
-              </div>
-              <div className="flex flex-row gap-1 items-center">
-                <i className="fa-solid fa-envelope"></i>
-                <span className="">info@codingtechnology.com.np</span>
-              </div>
+              <motion.div
+                className="flex flex-row gap-1 items-center"
+                initial="initial"
+                animate="initial"
+                whileHover="onHover"
+              >
+                <motion.i
+                  className="fa-solid fa-phone"
+                  variants={variants}
+                ></motion.i>
+                <Link to="tel:15100788" className="">
+                  +977-1-5100788
+                </Link>
+              </motion.div>
+              <motion.div
+                className="flex flex-row gap-1 items-center"
+                initial="initial"
+                animate="initial"
+                whileHover="onHover"
+              >
+                <motion.i
+                  className="fa-solid fa-envelope"
+                  variants={variants}
+                ></motion.i>
+                <Link to="mailto:info@codingtechnology.com.np" className="">
+                  info@codingtechnology.com.np
+                </Link>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
         <motion.div
           className="flex flex-row py-1"
-          style={{
-            y: showTop ? 0 : [-10, 0],
-            transition: "0.5s y"
-          }}
+          animate={{ y: showTop ? 0 : [0, -10, 0] }}
+          transition={{ duration: 1 }}
         >
           {navlinks.map((navlink, index) => (
             <Navlink
