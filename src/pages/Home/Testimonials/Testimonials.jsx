@@ -51,7 +51,7 @@ export default function Testimonials() {
     },
   ];
   return (
-    <div className="w-full flex flex-col p-8 bg-gray-100 relative">
+    <div className="w-full flex flex-col p-8 bg-gray-200 relative">
       <div
         className="absolute top-1/2 left-0 z-10 text-white text-2xl ml-4 mix-blend-difference cursor-pointer"
         onClick={() => {

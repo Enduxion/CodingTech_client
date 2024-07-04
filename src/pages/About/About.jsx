@@ -4,7 +4,7 @@ import TransitionComponent from "../../components/TransitionComponent/Transition
 const About = () => {
   return (
     <div className="flex w-full mt-nav flex-col">
-      <div className="w-full bg-gray-100 p-8">
+      <div className="w-full bg-gray-200 p-8">
         <span className="w-full flex flex-col text-3xl font-bold">
           <span className="font-roboto">
             Introduction <i className="fas fa-code"></i>

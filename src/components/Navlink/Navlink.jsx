@@ -21,7 +21,7 @@ export default function Navlink({ name, link, dropdown, index }) {
       <AnimatePresence>
         {showDropdown && dropdown && (
           <motion.div
-            className="flex flex-col w-[150%] h-64 overflow-y-scroll border border-t-transparent rounded-b-lg shadow-lg absolute top-full bg-white"
+            className="flex flex-col w-[150%] h-64 overflow-y-scroll rounded-b-lg shadow-lg absolute top-full border-b-[1px] border-slate-400 bg-opacity-90 backdrop-blur-md bg-amber-100"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}

@@ -12,7 +12,7 @@ export default function FClasses() {
     }
   }, []);
   return (
-    <div className="w-full flex flex-col p-8 bg-gray-100">
+    <div className="w-full flex flex-col p-8 bg-gray-200">
       <span className="w-full flex flex-col text-3xl font-bold">
         <span className="font-roboto">Featured Courses <i className="fas fa-laptop-code"></i></span>
         <span className="w-full bg-[linear-gradient(90deg,#16157a_0%,#16157a_50%)] h-1"></span>

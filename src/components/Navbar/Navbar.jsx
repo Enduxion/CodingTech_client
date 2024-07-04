@@ -73,7 +73,7 @@ export default function Navbar() {
       }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       id="navbar"
-      className="fixed top-0 left-0 w-full h-nav bg-white flex flex-row justify-between px-8 border-b-[1px] border-slate-400 bg-opacity-60 backdrop-hue-rotate-90 backdrop-blur-md items-center z-50"
+      className="fixed top-0 left-0 w-full h-nav bg-gray-200 flex flex-row justify-between px-8 border-b-[1px] border-slate-400 bg-opacity-90 backdrop-blur-md items-center z-50"
     >
       <div>
         <img src={logoImage} alt="Coding Technology Logo" />
