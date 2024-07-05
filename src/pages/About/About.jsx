@@ -38,7 +38,7 @@ const About = () => {
           </div>
           <img
             src={aboutImage}
-            className="w-1/2 object-cover"
+            className="w-1/2 object-cover rounded-md border-2 border-primary shadow-md shadow-primary"
             alt="codingtechimg"
           />
         </div>
@@ -51,7 +51,7 @@ const About = () => {
           <span className="w-full bg-[linear-gradient(90deg,#16157a_0%,#16157a_50%)] h-1"></span>
         </span>
         <div className="flex flex-row gap-4 py-4 flex-wrap">
-          <div className="w-[calc(50%-0.5px-1rem)] text-justify flex flex-col">
+          <div className="w-[calc(50%-0.5rem)] text-justify flex flex-col">
             <span className="font-roboto text-xl font-bold">Location</span>
             <p>
               We are located at Balkumari, Koteshwor in Kathmandu, Nepal. We are
@@ -62,8 +62,7 @@ const About = () => {
               the second floor.
             </p>
           </div>
-          <div className="w-[1px] rounded-full min-h-full flex bg-indigo-600"></div>
-          <div className="w-[calc(50%-0.5px-1rem)] text-justify flex flex-col">
+          <div className="w-[calc(50%-0.5rem)] text-justify flex flex-col">
             <span className="font-roboto text-xl font-bold">Course Details</span>
             <p>
               We offer support in urgent times with our fast-paced classes, and
@@ -74,7 +73,7 @@ const About = () => {
               guidance to ensure your success.
             </p>
           </div>
-          <div className="w-[calc(50%-0.5px-1rem)] text-justify flex flex-col">
+          <div className="w-[calc(50%-0.5rem)] text-justify flex flex-col">
             <span className="font-roboto text-xl font-bold">Availability</span>
             <p>
               We are available from 6:00 am to 7:00 pm for all your needs and
@@ -85,8 +84,7 @@ const About = () => {
               quick responses and assistance.
             </p>
           </div>
-          <div className="w-[1px] rounded-full min-h-full flex bg-indigo-600"></div>
-          <div className="w-[calc(50%-0.5px-1rem)] text-justify flex flex-col">
+          <div className="w-[calc(50%-0.5rem)] text-justify flex flex-col">
             <span className="font-roboto text-xl font-bold">Contact</span>
             <div>
               You can contact us on{" "}

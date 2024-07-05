@@ -3,7 +3,7 @@ export default function TransitionComponent(WrappedComp) {
   return () => (
     <>
       <motion.div
-        className="w-screen fixed top-0 left-0 h-screen bg-white origin-bottom z-50 border-2 border-black text-5xl font-roboto flex items-center justify-center text-gray-600"
+        className="w-screen fixed top-0 left-0 h-screen bg-gray-200 origin-bottom z-50 border-2 border-black text-5xl font-roboto flex items-center justify-center text-gray-600"
         initial={{ y: "100%" }}
         animate={{ y: "100%" }}
         exit={{ y: 0 }}
@@ -19,7 +19,7 @@ export default function TransitionComponent(WrappedComp) {
         </motion.div>
       </motion.div>
       <motion.div
-        className="w-screen fixed top-0 left-0 h-screen bg-white origin-top z-50 border-2 border-black text-5xl font-roboto flex items-center justify-center text-gray-600"
+        className="w-screen fixed top-0 left-0 h-screen bg-gray-200 origin-top z-50 border-2 border-black text-5xl font-roboto flex items-center justify-center text-gray-600"
         initial={{ y: 0 }}
         animate={{ y: "-100%" }}
         exit={{ sacleY: "-100%" }}

@@ -13,7 +13,7 @@ export default function Navlink({ name, link, dropdown, index }) {
     >
       <Link
         to={link}
-        className="uppercase tracking-widest px-4 py-2"
+        className="uppercase tracking-widest px-4 py-1 hover:border-b-gray-500 border-b-2 border-transparent duration-150"
       >
         {name}
         {dropdown && <i className="fas fa-angle-down ml-2"></i>}
@@ -21,7 +21,7 @@ export default function Navlink({ name, link, dropdown, index }) {
       <AnimatePresence>
         {showDropdown && dropdown && (
           <motion.div
-            className="flex flex-col w-[150%] h-64 overflow-y-scroll rounded-b-lg shadow-lg absolute top-full border-b-[1px] border-slate-400 bg-opacity-90 backdrop-blur-md bg-amber-100"
+            className="flex flex-col w-[150%] h-64 overflow-y-scroll rounded-b-lg shadow-lg absolute top-full border-b-[1px] border-slate-400 bg-opacity-90 backdrop-blur-md bg-gray-200"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
