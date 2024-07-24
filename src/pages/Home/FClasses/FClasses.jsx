@@ -6,7 +6,7 @@ export default function FClasses() {
   const [courses, setCourses] = useState(null);
   useEffect(() => {
     if (!courses) {
-      axios.get("http://localhost:3000/api/courses/get_courses").then((res) => {
+      axios.get("https://codingtech.onrender.com/api/courses/get_courses").then((res) => {
         setCourses(res.data);
       })
     }

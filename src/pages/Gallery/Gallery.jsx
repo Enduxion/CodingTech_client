@@ -4,13 +4,14 @@ import { useState } from "react";
 import Icard from "../../components/Icard/Icard";
 import IPopup from "../../components/IPopup/IPopup";
 import TransitionComponent from "../../components/TransitionComponent/TransitionComponent";
+import { AnimatePresence } from "framer-motion";
 
 const Gallery = () => {
   const [imgLinks, setImgLinks] = useState(null);
   const [imgIndex, setImgIndex] = useState(-1);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/images/get_images").then((res) => {
+    axios.get("https://codingtech.onrender.com/api/images/get_images").then((res) => {
       setImgLinks(res.data);
     });
   }, []);
@@ -27,15 +28,22 @@ const Gallery = () => {
               name={imgLink.name}
               link={imgLink.link}
               onClick={() => setImgIndex(index)}
-              description={imgLink.description}
             />
-        ))}
+          ))}
       </div>
-      {
-        (imgIndex !== -1) && <IPopup />
-      }
+      <AnimatePresence>
+        {imgIndex !== -1 && (
+          <IPopup
+            name={imgLinks[imgIndex].name}
+            description={imgLinks[imgIndex].description}
+            index={imgIndex}
+            link={imgLinks[imgIndex].link}
+            onClick={() => setImgIndex(-1)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
-}
+};
 
 export default TransitionComponent(Gallery);

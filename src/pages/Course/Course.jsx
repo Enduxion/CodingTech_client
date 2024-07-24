@@ -15,7 +15,7 @@ const Course = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:3000/api/courses/get_course/${id}`)
+        .get(`https://codingtech.onrender.com/api/courses/get_course/${id}`)
         .then((res) => {
           setCourseData(res.data.course);
         });

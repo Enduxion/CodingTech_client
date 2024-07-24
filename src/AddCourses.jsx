@@ -14,7 +14,7 @@ export default function AddCourse() {
     })
   }
   const handleSubmit = () => {
-    axios.post("http://localhost:3000/api/courses/post_course", data).then((res) => {
+    axios.post("https://codingtech.onrender.com/api/courses/post_course", data).then((res) => {
       console.log(res.data)
       setData({ name: "", description: "", duration: "", img: "" });
     });

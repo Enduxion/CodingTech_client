@@ -6,7 +6,7 @@ import TransitionComponent from "../../components/TransitionComponent/Transition
 const Courses = () => {
   const [courses, setCourses] = useState(null);
   useEffect(() => {
-    axios.get("http://localhost:3000/api/courses/get_courses").then((res) => {
+    axios.get("https://codingtech.onrender.com/api/courses/get_courses").then((res) => {
       setCourses(res.data);
     });
   }, []);

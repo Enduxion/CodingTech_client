@@ -12,7 +12,7 @@ export default function Navbar() {
 
   useEffect(() => {
     if (!allCourses) {
-      axios.get("http://localhost:3000/api/courses/get_courses").then((res) => {
+      axios.get("https://codingtech.onrender.com/api/courses/get_courses").then((res) => {
         setAllCourses(res.data);
       });
     }
